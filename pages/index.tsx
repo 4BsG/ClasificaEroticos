@@ -1,6 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head';
 
+import Formulary from './componets/Register';
+
 const Home: NextPage = () => {
 
   return (
@@ -11,10 +13,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-
-      <h1 className="text-3xl font-bold underline text-red-500">
-      Hello world!
-      </h1>
+      <Formulary />
     </>
   )
 }
