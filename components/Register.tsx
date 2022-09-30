@@ -1,12 +1,12 @@
-// import type { NextComponentType } from 'next'
 import { useFormik } from 'formik'
 import * as Yup from 'yup';
+import { db } from '../firebase/firebase';
+import { addDoc, collection } from 'firebase/firestore';
 
 interface Values {
   firstName: string;
   lastName: string;
   email: string;
-  accepted?: boolean;
 }
 
 const Formulary = () => {
@@ -15,19 +15,19 @@ const Formulary = () => {
       firstName: '',
       lastName: '',
       email: '',
-      // accepted: false,
     },
     validationSchema: Yup.object({
       firstName: Yup.string().required('Nombre no ingresado'),
       lastName: Yup.string().required('Apellido no ingresado'),
       email: Yup.string().email('Invalid email address').required('Por favor ingresa un email valido'),
-      // accepted: Yup.bool().isTrue(),
     }),
-    onSubmit: ( values: Values) => {
-      // setTimeout(() => {
-      //   alert(JSON.stringify(values, null, 2))
-      //   setSubmitting(false)
-      // }, 500)
+    onSubmit: async ( values: Values) => {
+      try {
+        const docRef = await addDoc(collection(db, 'Users'), values)
+        console.log(docRef.id)
+      } catch (error) {
+        console.error(error)
+      }
       console.log(values)
     },
   });
