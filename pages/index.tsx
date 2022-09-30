@@ -12,7 +12,7 @@ const Home: NextPage = () => {
       </Head>
       <NavBar />
 
-      <h1>Hello</h1>
+      <h1 className="text-center">Hello</h1>
     </>
   );
 };
