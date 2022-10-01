@@ -1,12 +1,40 @@
 @tailwind base;
+
+.title {
+  @apply text-left;
+}
+
 @tailwind components;
+
+.btn {
+  @apply rounded-xl py-3 font-medium text-base text-center text-white transition delay-150;
+}
+
+.btn-primary {
+  @apply bg-primary;
+}
+.btn-primary:hover {
+  @apply bg-primary-dark;
+}
+
+.btn-secondary {
+  @apply bg-background-dark border border-primary text-primary;
+}
+.btn-secondary:hover {
+  @apply bg-background;
+}
+
+.input {
+  @apply bg-background-dark border border-none rounded-xl text-gray-400 my-1 px-3 py-4 text-sm;
+}
+
 @tailwind utilities;
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
