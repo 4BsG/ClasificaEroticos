@@ -9,7 +9,7 @@ interface Values {
   email: string;
 }
 
-const TextInput = ({ label, ...props }) => {
+const TextInput = ({ label , ...props }) => {
   const [field, meta] = useField(props);
   return (
     <>
