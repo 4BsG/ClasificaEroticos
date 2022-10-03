@@ -1,8 +1,7 @@
-import type { NextPage } from 'next'
+import type { NextPage } from 'next';
 import Head from 'next/head';
 
 const Home: NextPage = () => {
-
   return (
     <>
       <Head>
@@ -11,28 +10,27 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-
       <h1 className="text-3xl font-bold underline text-red-500">
-      Hello world!
+        Hello world!
       </h1>
 
-      <div className='card-container m-sides-sm p-8'>
-        <p className='ts-base ts-title'>Soy un titulo</p>
-        <p className='ts-base ts-subtitle'>Soy un subtitulo</p>
-        <p className='ts-base'>Soy un texto</p>
-        <div className='card-container'>
-          <label className='ts-base ts-label'>Soy un label:</label>
-          <input className='input' type="text" />
-          <button className='btn btn-primary'>Soy un boton</button>
+      <div className="card-container m-sides-sm p-8">
+        <p className="ts-base ts-title">Soy un tituulo</p>
+        <p className="ts-base ts-subtitle">Soy un subtitulo</p>
+        <p className="ts-base">Soy un texto</p>
+        <div className="card-container">
+          <label className="ts-base ts-label">Soy un label:</label>
+          <input className="input" type="text" />
+          <button className="btn btn-primary">Soy un boton</button>
         </div>
       </div>
-      <div className='card-container fixed bottom-0 w-full px-sides-sm pt-2.5 rounded-b-none'>
-        <label className='ts-base ts-label'>Soy un label:</label>
-        <input className='input' type="text" />
-        <button className='btn btn-primary'>Soy un boton</button>
+      <div className="card-container fixed bottom-0 w-full px-sides-sm pt-2.5 rounded-b-none">
+        <label className="ts-base ts-label">Soy un label:</label>
+        <input className="input" type="text" />
+        <button className="btn btn-primary">Soy un boton</button>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
