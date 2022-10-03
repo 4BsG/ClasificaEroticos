@@ -15,6 +15,9 @@
   @apply font-medium text-color-label mb-3;
 }
 
+.ts-link {
+  @apply font-medium text-primary hover:text-primary-dark;
+}
 
 @tailwind components;
 
@@ -33,7 +36,7 @@
   @apply bg-background-dark border-1.5 border-primary text-primary;
 }
 .btn-secondary:hover {
-  @apply bg-background;
+  @apply bg-background text-primary-dark border-primary-dark;
 }
 .input {
   @apply bg-background-dark block w-full border border-background-dark rounded-xl text-color-text mb-5 px-5 py-4 text-sm font-normal;
@@ -45,14 +48,17 @@
   @apply bg-foreground max-w-full rounded-2xl flex flex-col;
 }
 
+.mobile-header-container {
+  @apply w-full bg-foreground h-16 flex justify-between items-center pl-4 pr-5;
+}
 @tailwind utilities;
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
@@ -70,6 +76,6 @@ a {
   }
   body {
     color: white;
-    background: #01003C;
+    background: #01003c;
   }
 }
