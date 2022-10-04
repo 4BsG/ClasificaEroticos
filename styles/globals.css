@@ -39,7 +39,7 @@
   @apply bg-background text-primary-dark border-primary-dark;
 }
 .input {
-  @apply bg-background-dark block w-full border border-background-dark rounded-xl text-color-text mb-5 px-5 py-4 text-sm font-normal;
+  @apply bg-background-dark block w-full border border-background-dark rounded-xl text-color-text mb-4 px-5 py-3 text-sm font-normal;
 }
 .input:focus {
   @apply bg-foreground border-color-border text-color-title caret-primary outline-none;

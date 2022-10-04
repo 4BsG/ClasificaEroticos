@@ -5,10 +5,12 @@ function HeaderSignIn() {
   return (
     <header className="mobile-header-container">
       <Link href={'/'}>
-        <a className="ts-link btn-secondary px-3 py-1 rounded-xl">Sign In</a>
+        <a className="ts-link  text-xs btn-secondary px-5 py-2 rounded-xl">
+          Sign In
+        </a>
       </Link>
       <Link href={'/'}>
-        <a className="ts-link">Continue As Guest 🠚</a>
+        <a className="ts-link text-xs ">Continue As Guest 🠚</a>
       </Link>
     </header>
   );

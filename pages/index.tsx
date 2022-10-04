@@ -11,11 +11,11 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1 className="text-3xl font-bold underline text-red-500">
+      <h1 className="text-3xl font-bold underline text-red-500 mb-4">
         Hello world!
       </h1>
       <Link href={'/login'}>
-        <a className=" btn-secondary">Go to Login Page</a>
+        <a className="btn btn-primary">Go to Login Page</a>
       </Link>
 
       <div className="card-container m-sides-sm p-8">

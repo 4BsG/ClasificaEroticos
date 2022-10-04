@@ -6,8 +6,8 @@ function login() {
   return (
     <>
       <HeaderSignIn />
-      <div className="w-full h-52 flex justify-center items-center">
-        <Image src="/img/logo.png" width={173} height={52} alt="Logo" />
+      <div className="w-full h-48 flex justify-center items-center">
+        <Image src="/img/logo.png" width={172} height={52} alt="Logo" />
       </div>
       <LoginForm />
     </>
