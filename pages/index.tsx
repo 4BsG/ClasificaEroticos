@@ -17,6 +17,9 @@ const Home: NextPage = () => {
       <Link href={'/login'}>
         <a className="btn btn-primary">Go to Login Page</a>
       </Link>
+      <Link href={'/register'}>
+        <a className="btn btn-primary">Go to Register Page</a>
+      </Link>
 
       <div className="card-container m-sides-sm p-8">
         <p className="ts-base ts-title">Soy un tituulo</p>

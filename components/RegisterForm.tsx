@@ -1,19 +1,16 @@
 import { Formik, Field, Form, ErrorMessage } from 'formik';
-import Link from 'next/link';
 import * as Yup from 'yup';
 
-// interface Values {
-//   email: string;
-// }
-
-function LoginForm() {
+function RegisterForm() {
   return (
     <div className="card-container  bottom-0 w-full px-sides-sm pt-2.5 rounded-b-none">
-      <h2 className="ts-title">Welcome Back</h2>
+      <h2 className="ts-title">Create Your Account</h2>
       <Formik
         initialValues={{
           email: '',
-          password: ''
+          password: '',
+          confirmPassword: '',
+          phoneNumber: ''
         }}
         validationSchema={Yup.object({
           email: Yup.string()
@@ -32,26 +29,23 @@ function LoginForm() {
             Password
           </label>
           <Field name="password" type="password" className="input" />
-          <Link href={'/'}>
-            <p className="ts-link text-xs text-end underline mb-10 cursor-pointer">
-              Forgot Password?
-            </p>
-          </Link>
+
+          <label htmlFor="confirmPassword" className="ts-label text-xs block">
+            Confirm Password
+          </label>
+          <Field name="confirmPassword" type="password" className="input" />
+
+          <label htmlFor="phone" className="ts-label text-xs block">
+            Phone Number
+          </label>
           <div className="flex items-center">
-            <Field
-              name="checkbox"
-              type="checkbox"
-              className="bg-background-dark"
-            ></Field>
-            <label
-              htmlFor="checkbox"
-              className="text-left text-xs font-poppins font-normal leading-1.4 text-color-text not-italic ml-2"
-            >
-              Keep me logged in for 60 days
-            </label>
+            <Field name="number" as="select" className="input w-16">
+              <option>+57</option>
+            </Field>
+            <Field name="phone" className="input ml-3" />
           </div>
           <button type="submit" className="btn btn-primary mt-3">
-            Sign in
+            Sign Up
           </button>
         </Form>
       </Formik>
@@ -59,4 +53,4 @@ function LoginForm() {
   );
 }
 
-export default LoginForm;
+export default RegisterForm;
