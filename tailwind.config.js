@@ -1,11 +1,28 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: '#FF0079',
+        'primary-dark': 'rgba(255, 0, 121, 0.8)',
+        foreground: '#1E1E53',
+        background: '#01003C',
+        'background-dark': 'rgba(1, 0, 60, 0.2)',
+        'background-modal': 'rgba(0, 0, 0, 0.6)',
+        'color-title': '#FFFFFF',
+        'color-text': 'rgba(255, 255, 255, 0.4)',
+        'color-label': 'rgba(255, 255, 255, 0.7)',
+        'color-border': 'rgba(255, 255, 255, 0.1)',
+        error: '#FF5252'
+      },
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif']
+      }
+    }
   },
-  plugins: [],
-}
+  plugins: []
+};
