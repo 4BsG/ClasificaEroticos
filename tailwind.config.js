@@ -9,6 +9,7 @@ module.exports = {
       colors: {
         "primary": "#FF0079",
         "primary-dark": "rgba(255, 0, 121, 0.8)",
+        "primary-off": "rgba(255, 0, 121, 0.2)",
         "foreground": "#1E1E53",
         "background": "#01003C",
         "background-dark": "rgba(1, 0, 60, 0.2)",

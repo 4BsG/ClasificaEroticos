@@ -24,29 +24,45 @@
 
 @tailwind components;
 
-/* Bottons: .btn */
+/* BUTTON (.btn) */
 /* background - box - margin x y - padding x y - font - transition */
 .btn {
-  @apply block w-full rounded-xl mb-8 py-3 font-medium text-base leading-1.4 text-center text-color-title not-italic transition;
+  @apply block rounded-xl leading-1.4 text-center not-italic transition;
 }
 .btn-primary {
-  @apply bg-primary;
+  @apply bg-primary text-color-title;
 }
 .btn-primary:hover {
-  @apply bg-primary-dark;
+  @apply bg-primary-dark text-color-title;
+}
+.primary-quiet {
+  @apply bg-primary-off text-primary;
 }
 .btn-secondary {
-  @apply bg-background-dark border-1.5 border-primary text-primary;
+  @apply bg-background-dark text-primary border-1.5 border-primary;
 }
 .btn-secondary:hover {
   @apply bg-background text-primary-dark border-primary-dark;
 }
+.btn-size-s {
+  @apply py-2 px-6 font-medium text-xs; /* mobile 8 - desktop 16 */
+}
+.btn-size-m {
+  @apply w-full py-2.5 font-medium text-sm; /* mobile 10 - desktop 18 */
+}
+.btn-size-l {
+  @apply w-full py-3 font-medium text-base; /* mobile 12 - desktop 18 */
+}
+
+/* INPUT */
 .input {
   @apply bg-background-dark block w-full border border-background-dark rounded-xl text-color-text mb-5 px-5 py-4 text-sm font-normal;
 }
 .input:focus {
   @apply bg-foreground border-color-border text-color-title caret-primary outline-none;
 }
+
+/* CARD */
 .card-container {
   @apply bg-foreground max-w-full rounded-2xl flex flex-col;
 }
