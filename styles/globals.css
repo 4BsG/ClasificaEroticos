@@ -31,18 +31,21 @@
 }
 .btn-primary {
   @apply bg-primary text-color-title;
+  flex: 4 1 70px;
 }
 .btn-primary:hover {
   @apply bg-primary-dark text-color-title;
 }
-.primary-quiet {
-  @apply bg-primary-off text-primary;
-}
 .btn-secondary {
   @apply bg-background-dark text-primary border-1.5 border-primary;
+  flex: 2 1 70px;
 }
 .btn-secondary:hover {
   @apply bg-background text-primary-dark border-primary-dark;
+}
+.primary-quiet {
+  @apply bg-primary-off text-primary border-none;
+  flex: 1 1 70px;
 }
 .btn-size-s {
   @apply py-2 px-6 font-medium text-xs; /* mobile 8 - desktop 16 */
@@ -52,6 +55,9 @@
 }
 .btn-size-l {
   @apply w-full py-3 font-medium text-base; /* mobile 12 - desktop 18 */
+}
+.btn-group {
+  @apply w-full flex gap-4 items-center;
 }
 
 /* INPUT */
