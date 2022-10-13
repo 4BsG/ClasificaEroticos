@@ -17,3 +17,30 @@ export interface ButtonGroupProps {
   orientation?: "vertical" | "horizontal",
   align?: "center" | "start" | "end",
 }
+
+export interface ButtonNavProps {
+  label?: string,
+  className?: string,
+  orientation: "next" | "doubleNext" | "prev" | "doublePrev",
+  size: "s" | "m",
+  action: () => void,
+}
+
+export interface ButtonLikeProps {
+  label?: string,
+  className?: string,
+  size: "s" | "m",
+  action: () => void,
+}
+
+export interface ButtonIconProps {
+  icon: string,
+  className?: string,
+  background: "circle" | "square" | "none",
+  color: "primary",
+  action: () => void,
+}
+
+export interface ButtonFilterProps {
+  children: JSX.Element | JSX.Element[],
+}

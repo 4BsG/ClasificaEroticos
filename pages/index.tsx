@@ -1,6 +1,11 @@
 import type { NextPage } from 'next'
 import Head from 'next/head';
 
+import { ButtonNav } from '../components/Button/ButtonNav';
+import { ButtonLike } from '../components/Button/ButtonLike';
+import { ButtonGroup } from '../components/Button/ButtonGroup';
+import { ButtonFilter } from '../components/Button/ButtonFilter';
+
 const Home: NextPage = () => {
 
   return (
@@ -15,6 +20,25 @@ const Home: NextPage = () => {
       <h1 className="text-3xl font-bold underline text-red-500">
       Hello world!
       </h1>
+      
+      <ButtonGroup className='bg-foreground mt-5 mx-10 p-3 rounded-md w-fit'>
+
+        <ButtonNav orientation='prev' size="s" action={() => alert("click")}/>
+
+        <ButtonLike label="Like" size="s" action={() => console.log("Clicked")}/>
+        
+        <ButtonNav orientation='next' size="s" action={() => alert("click")}/>
+
+        <ButtonFilter>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+        </ButtonFilter>
+
+        <ButtonNav orientation='doublePrev' size="s" action={() => alert("click")}/>
+        <ButtonNav orientation='doubleNext' size="s" action={() => alert("click")}/>
+        
+      </ButtonGroup>
     </>
   )
 }

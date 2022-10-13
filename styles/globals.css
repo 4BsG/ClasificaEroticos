@@ -63,6 +63,41 @@
 .btn-group {
   @apply w-full flex gap-4 items-center;
 }
+.btn-nav,
+.btn-like {
+  @apply flex gap-2 items-center w-fit cursor-pointer text-xs font-normal
+}
+.btn-nav-s > svg {
+  @apply text-xs
+}
+.btn-nav-m > svg {
+  @apply text-base
+}
+.btn-like-s > svg {
+  @apply text-base
+}
+.btn-like-m > svg {
+  @apply text-2xl
+}
+.btn-filter {
+  @apply bg-foreground border border-color-border text-color-title p-2 rounded-xl text-3xl relative;
+}
+.btn-filter-menu {
+  @apply bg-foreground flex flex-col gap-2 min-w-fit py-2 rounded-md text-xs top-14 border border-color-border right-0 cursor-default text-color-title;
+}
+.btn-filter-menu li {
+  @apply text-xs min-w-max px-2 py-1 cursor-pointer block;
+}
+.btn-filter-menu li:hover {
+  @apply bg-color-border;
+}
+
+.is-hidden {
+  display: none;
+}
+.is-active {
+  @apply bg-color-border text-color-text;
+}
 
 /* INPUT */
 .input {
