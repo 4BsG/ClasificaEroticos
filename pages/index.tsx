@@ -1,5 +1,9 @@
 import type { NextPage } from 'next'
 import Head from 'next/head';
+import { ButtonNav } from '../components/Button/ButtonNav';
+import { ButtonLike } from '../components/Button/ButtonLike';
+import { RiHeart3Line } from 'react-icons/ri';
+import { BsArrowRight } from 'react-icons/bs';
 
 const Home: NextPage = () => {
 
@@ -15,6 +19,14 @@ const Home: NextPage = () => {
       <h1 className="text-3xl font-bold underline text-red-500">
       Hello world!
       </h1>
+      
+      <ButtonLike size="s" action={() => alert("click")}>
+        <RiHeart3Line/>Like
+      </ButtonLike>
+
+      <ButtonNav size="s" orientation='reverse' action={() => alert("click")}>
+        <BsArrowRight />Next
+      </ButtonNav>
     </>
   )
 }

@@ -63,6 +63,25 @@
 .btn-group {
   @apply w-full flex gap-4 items-center;
 }
+.btn-nav,
+.btn-like {
+  @apply flex gap-2 items-center w-fit cursor-pointer text-xs font-normal
+}
+.btn-nav-s > svg {
+  @apply text-xs
+}
+.btn-nav-m > svg {
+  @apply text-base
+}
+.btn-like-s > svg {
+  @apply text-base
+}
+.btn-like-m > svg {
+  @apply text-2xl
+}
+.reverse {
+  @apply flex-row-reverse;
+}
 
 /* INPUT */
 .input {
