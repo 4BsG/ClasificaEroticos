@@ -1,20 +1,16 @@
 import { FiSearch } from 'react-icons/fi';
+import { InputProps } from '.';
 
-function SearchInput() {
+const SearchInput: React.FC<InputProps> = prop => {
+  const { placeholder = 'Search here' } = prop;
   return (
-    <div
-      className="flex items-center
-     bg-foreground rounded-xl border-2 border-color-border overflow-hidden"
-    >
-      <button className="pl-5 text-color-label">
+    <div className="input-container">
+      <input placeholder={placeholder} className="input-search" />
+      <button className="icon-search">
         <FiSearch />
       </button>
-      <input
-        placeholder="Search here"
-        className="bg-foreground outline-none p-3 w-full "
-      />
     </div>
   );
-}
+};
 
 export default SearchInput;

@@ -1,7 +1,8 @@
-import React from 'react';
+import { InputProps } from '.';
 
-function CheckInput() {
-  return <input type="checkbox" className="bg-background accent-primary " />;
-}
+const CheckInput: React.FC<InputProps> = prop => {
+  const { type = 'checkbox' } = prop;
+  return <input type={type} className="accent-primary " />;
+};
 
 export default CheckInput;

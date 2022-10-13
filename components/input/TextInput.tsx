@@ -1,17 +1,24 @@
 import { FaEyeSlash } from 'react-icons/fa';
+import { InputProps } from '.';
 
-function TextInput() {
+const TextInput: React.FC<InputProps> = prop => {
+  const {
+    placeholder = 'Enter here',
+    icon = 'icon-eyeslash',
+    type = 'password',
+    isPassword = true
+  } = prop;
+
   return (
-    <div
-      className="flex items-center justify-between
-     bg-foreground rounded-xl border-2 border-color-border  overflow-hidden"
-    >
-      <input type="text" className="bg-foreground outline-none p-3 w-full" />
-      <button className="pr-3 text-color-label opacity-20">
-        <FaEyeSlash size={22} />
-      </button>
+    <div className="input-container">
+      <input type={type} placeholder={placeholder} className={`input`} />
+      {isPassword && (
+        <button className={icon}>
+          <FaEyeSlash size={22} />
+        </button>
+      )}
     </div>
   );
-}
+};
 
 export default TextInput;

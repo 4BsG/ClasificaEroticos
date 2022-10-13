@@ -2,13 +2,15 @@
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}'
+    './components/**/*.{js,ts,jsx,tsx}',
+    './stories/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
     extend: {
       colors: {
         primary: '#FF0079',
         'primary-dark': 'rgba(255, 0, 121, 0.8)',
+        'primary-off': 'rgba(255, 0, 121, 0.2)',
         foreground: '#1E1E53',
         background: '#01003C',
         'background-dark': 'rgba(1, 0, 60, 0.2)',
@@ -21,6 +23,18 @@ module.exports = {
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif']
+      },
+      borderWidth: {
+        1.5: '1.5px'
+      },
+      lineHeight: {
+        1.4: '1.4'
+      },
+      padding: {
+        'sides-sm': '24px'
+      },
+      margin: {
+        'sides-sm': '24px'
       }
     }
   },

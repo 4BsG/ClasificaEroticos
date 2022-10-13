@@ -1,5 +1,110 @@
 @tailwind base;
+
+/* Text Style: .ts */
+/* box - align - size - font*/
+.ts-base {
+  @apply block text-left text-xs font-poppins font-normal leading-1.4 text-color-text not-italic mb-2.5;
+}
+.ts-title {
+  @apply text-lg font-semibold text-color-title mb-8;
+}
+.ts-subtitle {
+  @apply text-sm font-medium text-color-title mb-6;
+}
+.ts-label {
+  @apply font-medium text-color-label mb-3;
+}
+.ts-link {
+  @apply font-medium text-primary;
+}
+.ts-link:hover {
+  @apply text-primary-dark;
+}
+
 @tailwind components;
+
+/* BUTTON (.btn) */
+/* background - box - margin x y - padding x y - font - transition */
+.btn {
+  @apply block rounded-xl leading-1.4 text-center not-italic transition;
+}
+.btn-primary {
+  @apply bg-primary text-color-title;
+  flex: 4 1 70px;
+}
+.btn-primary:hover {
+  @apply bg-primary-dark text-color-title;
+}
+.btn-secondary {
+  @apply bg-background-dark text-primary border-1.5 border-primary;
+  flex: 2 1 70px;
+}
+.btn-secondary:hover {
+  @apply bg-background text-primary-dark border-primary-dark;
+}
+.btn-quiet {
+  @apply bg-primary-off text-primary border-none;
+  flex: 1 1 70px;
+  box-shadow: none;
+}
+.btn-quiet:hover {
+  box-shadow: 0 0 10px rgba(205, 0, 121, 0.2);
+}
+.btn-size-s {
+  @apply py-2 px-6 font-medium text-xs; /* mobile 8 - desktop 16 */
+}
+.btn-size-m {
+  @apply w-full py-2.5 font-medium text-sm; /* mobile 10 - desktop 18 */
+}
+.btn-size-l {
+  @apply w-full py-3 font-medium text-base; /* mobile 12 - desktop 18 */
+}
+.btn-group {
+  @apply w-full flex gap-4 items-center;
+}
+
+/* INPUT */
+.input-container {
+  @apply relative bg-background rounded-xl;
+}
+.input {
+  @apply bg-background block w-full border-2 border-transparent rounded-xl text-color-text px-5 py-4 text-sm font-normal;
+}
+.input:focus {
+  @apply bg-foreground border-2 border-color-border text-color-title caret-primary outline-none;
+}
+.input-search {
+  @apply bg-foreground border-2 border-color-border pl-11 block w-full rounded-xl text-color-text px-5 py-4 text-sm font-normal;
+}
+.input-search:focus {
+  @apply bg-foreground border-2 border-color-border text-color-title caret-primary outline-none;
+}
+.input-auth {
+  @apply bg-background rounded-xl border-2 border-primary w-12 h-12 text-sm text-center;
+}
+.input-auth:focus {
+  @apply bg-foreground caret-primary outline-none border-primary-dark;
+}
+.select-phone {
+  @apply bg-background w-16  text-sm text-center outline-none;
+}
+.select-country {
+  @apply bg-foreground w-20 text-xs;
+}
+
+.icon-eyeslash {
+  @apply absolute inset-y-0 right-0 pr-3 flex items-center text-color-label opacity-20;
+}
+
+.icon-search {
+  @apply absolute inset-y-0 left-0 pl-5 text-color-label;
+}
+
+/* CARD */
+.card-container {
+  @apply bg-foreground max-w-full rounded-2xl flex flex-col;
+}
+
 @tailwind utilities;
 
 html,
@@ -25,6 +130,6 @@ a {
   }
   body {
     color: white;
-    background: black;
+    background: #01003c;
   }
 }
