@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 export interface ButtonProps {
   label: string,
-  icon?: string | undefined,
+  icon?: boolean,
   className?: string,
   size?: "xs" | "s" | "m" | "l" | "xl",
   type?: "button" | "submit",
@@ -18,26 +18,12 @@ export interface ButtonGroupProps {
   align?: "center" | "start" | "end",
 }
 
-export interface ButtonNavProps {
-  label?: string,
-  className?: string,
-  orientation: "next" | "doubleNext" | "prev" | "doublePrev",
-  size: "s" | "m",
-  action: () => void,
-}
-
-export interface ButtonLikeProps {
-  label?: string,
-  className?: string,
-  size: "s" | "m",
-  action: () => void,
-}
-
 export interface ButtonIconProps {
-  icon: string,
+  label?: string,
+  icon: "like" | "trash" | "next" | "play" | "close" | "doubleNext" | "prev" | "doublePrev",
   className?: string,
-  background: "circle" | "square" | "none",
-  color: "primary",
+  size: "s" | "m" | "l",
+  type?: "delete" | "delete-round" | "close" | "play",
   action: () => void,
 }
 

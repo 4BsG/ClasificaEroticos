@@ -1,10 +1,9 @@
 import type { NextPage } from 'next'
 import Head from 'next/head';
 
-import { ButtonNav } from '../components/Button/ButtonNav';
-import { ButtonLike } from '../components/Button/ButtonLike';
 import { ButtonGroup } from '../components/Button/ButtonGroup';
 import { ButtonFilter } from '../components/Button/ButtonFilter';
+import { ButtonIcon } from '../components/Button/ButtonIcon';
 
 const Home: NextPage = () => {
 
@@ -23,11 +22,23 @@ const Home: NextPage = () => {
       
       <ButtonGroup className='bg-foreground mt-5 mx-10 p-3 rounded-md w-fit'>
 
-        <ButtonNav orientation='prev' size="s" action={() => alert("click")}/>
+        <ButtonIcon
+          icon="prev"
+          size="s"
+          action={() => alert("click")}
+        />
 
-        <ButtonLike label="Like" size="s" action={() => console.log("Clicked")}/>
+        <ButtonIcon
+          icon="like"
+          size="l"
+          action={() => console.log("Clicked")}
+        />
         
-        <ButtonNav orientation='next' size="s" action={() => alert("click")}/>
+        <ButtonIcon
+          icon="next"
+          size="s"
+          action={() => alert("click")}
+        />
 
         <ButtonFilter>
           <li>Item 1</li>
@@ -35,10 +46,58 @@ const Home: NextPage = () => {
           <li>Item 3</li>
         </ButtonFilter>
 
-        <ButtonNav orientation='doublePrev' size="s" action={() => alert("click")}/>
-        <ButtonNav orientation='doubleNext' size="s" action={() => alert("click")}/>
-        
+        <ButtonIcon
+          icon="doublePrev"
+          size="s"
+          action={() => console.log("Double prev")}
+        />
+        <ButtonIcon
+          icon="doubleNext"
+          size="s"
+          action={() => console.log("Double next")}
+        />
       </ButtonGroup>
+
+      <ButtonIcon
+        label="Like"
+        icon="like"
+        size="s"
+        action={() => console.log("Clicked")}
+      />
+
+      <ButtonIcon
+        icon="trash"
+        label="Delete"
+        size="s"
+        type="delete"
+        action={() => console.log("Clicked")}
+      />
+      <ButtonIcon
+        icon="trash"
+        size="m"
+        type="delete"
+        action={() => console.log("Clicked")}
+      />
+      <ButtonIcon
+        icon="trash"
+        size="l"
+        type="delete-round"
+        action={() => console.log("Clicked")}
+      />
+
+      <ButtonIcon
+        icon="play"
+        size="l"
+        type="play"
+        action={() => console.log("Clicked")}
+      />
+
+      <ButtonIcon
+        icon="close"
+        size="l"
+        type="close"
+        action={() => console.log("Clicked")}
+      />
     </>
   )
 }

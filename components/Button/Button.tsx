@@ -1,9 +1,10 @@
 import { ButtonProps } from ".";
+import { FaPen } from "react-icons/fa";
 
 export const Button: React.FC<ButtonProps> = (prop) => {
   const {
     label,
-    icon = undefined,
+    icon = false,
     className = "",
     size = "m",
     type = "button",
@@ -20,7 +21,7 @@ export const Button: React.FC<ButtonProps> = (prop) => {
         onClick={action}
         className={`btn ${isDisabled ? "btn-quiet" : `btn-${variant}`} btn-size-${size} ${className}`}
       >
-        <i className={icon}></i>
+        {icon && <FaPen />}
         {label}
       </button>
     </>

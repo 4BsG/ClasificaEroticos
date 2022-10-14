@@ -27,7 +27,7 @@
 /* BUTTON (.btn) */
 /* background - box - margin x y - padding x y - font - transition */
 .btn {
-  @apply block rounded-xl leading-1.4 text-center not-italic transition;
+  @apply rounded-xl leading-1.4 flex items-center justify-center gap-2 not-italic transition;
 }
 .btn-primary {
   @apply bg-primary text-color-title;
@@ -63,21 +63,35 @@
 .btn-group {
   @apply w-full flex gap-4 items-center;
 }
-.btn-nav,
-.btn-like {
-  @apply flex gap-2 items-center w-fit cursor-pointer text-xs font-normal
+.btn-icon {
+  @apply flex gap-2 items-center w-fit cursor-pointer font-normal;
 }
-.btn-nav-s > svg {
-  @apply text-xs
+.btn-icon-delete {
+  @apply text-negative;
 }
-.btn-nav-m > svg {
-  @apply text-base
+.btn-icon-delete-round {
+  @apply flex items-center justify-center bg-foreground w-[34px] h-[34px] text-negative rounded-full;
 }
-.btn-like-s > svg {
-  @apply text-base
+.btn-icon-close {
+  @apply text-primary;
 }
-.btn-like-m > svg {
-  @apply text-2xl
+.btn-icon-play {
+  @apply flex items-center justify-center bg-black-50 w-[53px] h-[53px] rounded-full text-white;
+}
+.btn-icon-s {
+  @apply text-xs;
+}
+.btn-icon-s > svg {
+  @apply text-base;
+}
+.btn-icon-m {
+  @apply text-base;
+}
+.btn-icon-m > svg {
+  @apply text-[19px];
+}
+.btn-icon-l {
+  @apply text-2xl;
 }
 .btn-filter {
   @apply bg-foreground border border-color-border text-color-title p-2 rounded-xl text-3xl relative;
