@@ -46,7 +46,7 @@ export const ButtonIcon: React.FC<ButtonIconProps> = (prop) => {
   
   return (
     <>
-      <div
+      <button
         className={
           [
             "btn-icon",
@@ -61,7 +61,7 @@ export const ButtonIcon: React.FC<ButtonIconProps> = (prop) => {
       >
         {icons[icon]}
         {label && <span>{label}</span>}
-      </div>
+      </button>
     </>
   );
 }
