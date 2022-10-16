@@ -8,14 +8,6 @@ export default {
   component: SelectInput
 } as ComponentMeta<typeof SelectInput>;
 
-export const SelectPhone = {
-  args: {
-    isPhoneCode: false
-  }
-};
-
-export const SelectCountry = {
-  args: {
-    isPhoneCode: true
-  }
+export const SelectOption = {
+  args: {}
 };

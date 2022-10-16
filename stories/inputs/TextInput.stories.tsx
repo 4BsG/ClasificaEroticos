@@ -8,18 +8,9 @@ export default {
   component: TextInput
 } as ComponentMeta<typeof TextInput>;
 
-export const password = {
-  args: {
-    placeholder: 'Enter Here',
-    type: 'password',
-    isPassword: true
-  }
-};
-
 export const email = {
   args: {
     placeholder: 'Email@gmail.com',
-    type: 'email',
-    isPassword: false
+    type: 'email'
   }
 };

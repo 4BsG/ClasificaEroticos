@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Link from 'next/link';
 
 const Home: NextPage = () => {
   return (
@@ -13,6 +14,11 @@ const Home: NextPage = () => {
       <h1 className="text-3xl font-bold underline text-red-500 mb-5">
         Hello world!
       </h1>
+      <Link href={'/inputs'}>
+        <a className="btn btn-primary btn-size-m w-72">
+          Inputs components, click it!{' '}
+        </a>
+      </Link>
     </>
   );
 };
