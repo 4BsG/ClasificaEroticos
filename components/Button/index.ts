@@ -30,3 +30,17 @@ export interface ButtonIconProps {
 export interface ButtonFilterProps {
   children: JSX.Element | JSX.Element[],
 }
+
+export interface ButtonWalletUserPointsProps {
+  points: number,
+  className?: string,
+  action: () => void,
+}
+
+export interface ButtonChooseProps {
+  type: "ad" | "credit",
+  value: string,
+  price: number,
+  className?: string,
+  action: () => void,
+}

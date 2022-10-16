@@ -1,10 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head';
 
-import { ButtonGroup } from '../components/Button/ButtonGroup';
-import { ButtonFilter } from '../components/Button/ButtonFilter';
-import { ButtonIcon } from '../components/Button/ButtonIcon';
-
 const Home: NextPage = () => {
 
   return (
@@ -19,85 +15,6 @@ const Home: NextPage = () => {
       <h1 className="text-3xl font-bold underline text-red-500">
       Hello world!
       </h1>
-      
-      <ButtonGroup className='bg-foreground mt-5 mx-10 p-3 rounded-md w-fit'>
-
-        <ButtonIcon
-          icon="prev"
-          size="s"
-          action={() => alert("click")}
-        />
-
-        <ButtonIcon
-          icon="like"
-          size="l"
-          action={() => console.log("Clicked")}
-        />
-        
-        <ButtonIcon
-          icon="next"
-          size="s"
-          action={() => alert("click")}
-        />
-
-        <ButtonFilter>
-          <li>Item 1</li>
-          <li>Item 2</li>
-          <li>Item 3</li>
-        </ButtonFilter>
-
-        <ButtonIcon
-          icon="doublePrev"
-          size="s"
-          action={() => console.log("Double prev")}
-        />
-        <ButtonIcon
-          icon="doubleNext"
-          size="s"
-          action={() => console.log("Double next")}
-        />
-      </ButtonGroup>
-
-      <ButtonIcon
-        label="Like"
-        icon="like"
-        size="s"
-        action={() => console.log("Clicked")}
-      />
-
-      <ButtonIcon
-        icon="trash"
-        label="Delete"
-        size="s"
-        type="delete"
-        action={() => console.log("Clicked")}
-      />
-      <ButtonIcon
-        icon="trash"
-        size="m"
-        type="delete"
-        action={() => console.log("Clicked")}
-      />
-      <ButtonIcon
-        icon="trash"
-        size="l"
-        type="delete-round"
-        action={() => console.log("Clicked")}
-      />
-
-      <ButtonIcon
-        icon="play"
-        size="l"
-        type="play"
-        action={() => console.log("Clicked")}
-      />
-
-      <ButtonIcon
-        icon="close"
-        size="l"
-        type="close"
-        action={() => console.log("Clicked")}
-      />
     </>
   )
 }

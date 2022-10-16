@@ -51,6 +51,17 @@
 .btn-quiet:hover {
   box-shadow: 0 0 10px rgba(205, 0, 121, 0.2);
 }
+.btn-user-points {
+  @apply bg-primary-off text-primary border-none px-3 py-2.5 gap-1.5 text-xs font-medium;
+}
+.btn-choose { 
+  @apply bg-foreground text-primary py-[19px] w-full px-3 gap-1.5 text-sm font-medium border border-foreground;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.btn-choose:hover { 
+  @apply border border-primary;
+  box-shadow: 0 0 20px rgba(255, 0, 121, 0.25);
+}
 .btn-size-s {
   @apply py-2 px-6 font-medium text-xs; /* mobile 8 - desktop 16 */
 }
