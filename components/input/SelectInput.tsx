@@ -5,10 +5,7 @@ const SelectInput: React.FC<InputProps> = prop => {
   const {} = prop;
   return (
     <div className="input-container px-4 py-3">
-      <select className="select-option text-color-label">
-        <option value="" disabled selected hidden>
-          Choose
-        </option>
+      <select defaultValue="Choose" className="select-option text-color-label">
         <option>something</option>
         <option>something</option>
       </select>
