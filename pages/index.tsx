@@ -19,6 +19,11 @@ const Home: NextPage = () => {
           Inputs components, click it!{' '}
         </a>
       </Link>
+      <Link href={'/molecules'}>
+        <a className="btn btn-primary btn-size-m w-72 mt-4">
+          Molecules components, click it!{' '}
+        </a>
+      </Link>
     </>
   );
 };
