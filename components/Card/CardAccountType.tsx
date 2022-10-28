@@ -7,7 +7,7 @@ export const CardAccountType: React.FC<CardAccountTypeProps> = (prop) => {
     children,
     image,
     title,
-    descrption,
+    description,
     className = "",
   } = prop;
 
@@ -26,7 +26,7 @@ export const CardAccountType: React.FC<CardAccountTypeProps> = (prop) => {
 
         <div className="card-content">
           <h3 className="ts-base ts-title-card">{title}</h3>
-          <p className="ts-base">{descrption}</p>
+          <p className="ts-base">{description}</p>
         </div>
 
         <ButtonGroup orientation="vertical">

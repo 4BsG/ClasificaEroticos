@@ -11,7 +11,7 @@ export interface CardAccountTypeProps {
   children: ReactNode,
   image: Image,
   title: string,
-  descrption?: string,
+  description?: string,
   className?: string,
 }
 
@@ -19,7 +19,7 @@ export interface CardCTAProps {
   children: JSX.Element,
   image: Image,
   title: string,
-  descrption?: string,
+  description?: string,
   className?: string,
 }
 
