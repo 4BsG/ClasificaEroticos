@@ -1,6 +1,29 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Link from 'next/link';
+import { Button } from '../components/Button/Button';
+import { CardAccountType } from '../components/Card/CardAccountType';
+import { CardCTA } from '../components/Card/CardCTA';
+import { CardServices } from '../components/Card/CardServices';
+
+const manSvg = {
+  src: '/man.svg',
+  width: 192,
+  height: 207,
+  alt: 'card'
+}
+const serviceSvg = {
+  src: '/masaje.svg',
+  width: 110,
+  height: 87,
+  alt: 'card'
+}
+const notificationSvg = {
+  src: '/notification.svg',
+  width: 110,
+  height: 87,
+  alt: 'card'
+}
+const tagsList = ["Talca","Rancagua","La Serena","Antofagasta","Chillan","Conception","Rancagua","La Serena","Antofagasta","Chillan","Conception","Rancagua","La Serena","Antofagasta","Chillan","Conception","Rancagua","La Serena","Antofagasta","Chillan","Conception"]
 
 const Home: NextPage = () => {
   return (
@@ -11,8 +34,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+
       <h1 className="text-3xl font-bold underline text-red-500 mb-5">
-        Hello world!
+      Hello world!
       </h1>
       <Link href={'/inputs'}>
         <a className="btn btn-primary btn-size-m w-72">
@@ -24,6 +48,7 @@ const Home: NextPage = () => {
           Molecules components, click it!{' '}
         </a>
       </Link>
+
     </>
   );
 };
