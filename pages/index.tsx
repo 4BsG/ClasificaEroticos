@@ -1,6 +1,29 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Link from 'next/link';
+import { Button } from '../components/Button/Button';
+import { CardAccountType } from '../components/Card/CardAccountType';
+import { CardCTA } from '../components/Card/CardCTA';
+import { CardServices } from '../components/Card/CardServices';
+
+const manSvg = {
+  src: '/man.svg',
+  width: 192,
+  height: 207,
+  alt: 'card'
+}
+const serviceSvg = {
+  src: '/masaje.svg',
+  width: 110,
+  height: 87,
+  alt: 'card'
+}
+const notificationSvg = {
+  src: '/notification.svg',
+  width: 110,
+  height: 87,
+  alt: 'card'
+}
+const tagsList = ["Talca","Rancagua","La Serena","Antofagasta","Chillan","Conception","Rancagua","La Serena","Antofagasta","Chillan","Conception","Rancagua","La Serena","Antofagasta","Chillan","Conception","Rancagua","La Serena","Antofagasta","Chillan","Conception"]
 
 const Home: NextPage = () => {
   return (
@@ -12,25 +35,47 @@ const Home: NextPage = () => {
       </Head>
 
 
-      <h1 className="text-3xl font-bold underline text-red-500">
+      <h1 className="text-3xl font-bold underline text-red-500 mb-5">
       Hello world!
       </h1>
+      <CardCTA
+        image={notificationSvg}
+        title='publish your ads now'
+        descrption='Register now to publish your ads and get much more!'
+        className='mx-sides-sm mb-10'
+      >
+        <Button
+          label='register'
+          variant='primary'
+          action={() => console.log('test')}
+        />
+      </CardCTA>
+      
+      <CardAccountType
+        image={manSvg}
+        title='Choose your account type'
+        descrption='Let us know for what you are here so we
+        can serve you better'
+        className='mx-sides-sm mb-10'
+      >
+        <Button
+          label='To post ads'
+          variant='primary'
+          action={() => console.log('test')}
+        />
+        <Button
+          label='to post experiences'
+          variant='secondary'
+          action={() => console.log('test')}
+        />
+      </CardAccountType>
 
-      <div className='card-container m-sides-sm p-8'>
-        <p className='ts-base ts-title'>Soy un titulo</p>
-        <p className='ts-base ts-subtitle'>Soy un subtitulo</p>
-        <p className='ts-base'>Soy un texto</p>
-        <div className='card-container'>
-          <label className='ts-base ts-label'>Soy un label:</label>
-          <input className='input' type="text" />
-          <button className='btn btn-primary'>Soy un boton</button>
-        </div>
-      </div>
-      <div className='card-container fixed bottom-0 w-full px-sides-sm pt-2.5 rounded-b-none'>
-        <label className='ts-base ts-label'>Soy un label:</label>
-        <input className='input' type="text" />
-        <button className='btn btn-primary'>Soy un boton</button>
-      </div>
+      <CardServices
+        className='mb-20'
+        image={serviceSvg}
+        tags={tagsList}
+        action={() => console.log('Test card-service')}
+      />
     </>
   );
 };
