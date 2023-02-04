@@ -35,6 +35,18 @@ module.exports = {
           label: "rgba(255, 255, 255, 0.7)",
           border: "rgba(255, 255, 255, 0.1)",
         },
+        "primary": "#FF0079",
+        "primary-dark": "rgba(255, 0, 121, 0.8)",
+        "primary-off": "rgba(255, 0, 121, 0.2)",
+        "foreground": "#1E1E53",
+        "background": "#01003C",
+        "background-dark": "rgba(1, 0, 60, 0.2)",
+        "background-modal": "rgba(0, 0, 0, 0.6)",
+        "color-title": "#FFFFFF",
+        "color-text": "rgba(255, 255, 255, 0.4)",
+        "color-label": "rgba(255, 255, 255, 0.7)",
+        "color-border": "rgba(255, 255, 255, 0.1)",
+        "error": "#FF5252",
       },
       fontFamily: {
         "poppins": ["Poppins", "sans-serif"],
@@ -53,5 +65,5 @@ module.exports = {
       }
     },
   },
-  plugins: [],
-}
+  plugins: []
+};

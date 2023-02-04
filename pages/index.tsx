@@ -1,4 +1,4 @@
-import type { NextPage } from 'next'
+import type { NextPage } from 'next';
 import Head from 'next/head';
 import { Button } from '../components/Button/Button';
 import { CardAccountType } from '../components/Card/CardAccountType';
@@ -26,7 +26,6 @@ const notificationSvg = {
 const tagsList = ["Talca","Rancagua","La Serena","Antofagasta","Chillan","Conception","Rancagua","La Serena","Antofagasta","Chillan","Conception","Rancagua","La Serena","Antofagasta","Chillan","Conception","Rancagua","La Serena","Antofagasta","Chillan","Conception"]
 
 const Home: NextPage = () => {
-
   return (
     <>
       <Head>
@@ -39,7 +38,6 @@ const Home: NextPage = () => {
       <h1 className="text-3xl font-bold underline text-red-500 mb-5">
       Hello world!
       </h1>
-
       <CardCTA
         image={notificationSvg}
         title='publish your ads now'
@@ -79,7 +77,7 @@ const Home: NextPage = () => {
         action={() => console.log('Test card-service')}
       />
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
