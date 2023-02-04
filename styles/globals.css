@@ -21,7 +21,6 @@
   @apply text-primary-dark;
 }
 
-
 @tailwind components;
 
 /* BUTTON (.btn) */
@@ -43,6 +42,14 @@
 .btn-secondary:hover {
   @apply bg-background text-primary-dark border-primary-dark;
 }
+
+.btn-quiet {
+  @apply bg-primary-off text-primary border-none;
+  flex: 1 1 70px;
+  box-shadow: none;
+}
+.btn-quiet:hover {
+  box-shadow: 0 0 10px rgba(205, 0, 121, 0.2);
 .primary-quiet {
   @apply bg-primary-off text-primary border-none;
   flex: 1 1 70px;
@@ -61,11 +68,55 @@
 }
 
 /* INPUT */
+.input-container {
+  @apply relative bg-background rounded-xl;
+}
+.input {
+  @apply bg-background block w-full border-2 border-transparent rounded-xl text-color-text px-5 py-4 text-sm font-normal;
+}
+.input:focus {
+  @apply bg-foreground border-2 border-color-border text-color-title caret-primary outline-none;
+}
+.input-search {
+  @apply bg-foreground border-2 border-color-border pl-11 block w-full rounded-xl text-color-text px-5 py-4 text-sm font-normal;
+}
+.input-search:focus {
+  @apply bg-foreground border-2 border-color-border text-color-title caret-primary outline-none;
+}
+.input-auth {
+  @apply bg-background rounded-xl border-2 border-primary w-12 h-12 text-sm text-center;
+}
+.input-auth:focus {
+  @apply bg-foreground caret-primary outline-none border-primary-dark;
+}
+.select-option {
+  @apply bg-background appearance-none w-full outline-none;
+}
+
+.select-phone {
+  @apply bg-background text-sm text-center outline-none appearance-none pl-4;
+}
+.select-country {
+  @apply bg-foreground w-20 text-xs;
+}
+
+.icon-eyeslash {
+  @apply absolute inset-y-0 right-0 pr-3 flex items-center text-color-label opacity-20;
+}
+
+.icon-search {
+  @apply absolute inset-y-0 left-0 pl-5 text-color-label;
+}
+
+.icon-dropdown {
+  @apply absolute inset-y-0 top-1 pl-1 flex items-center;
+  
 .input {
   @apply bg-background-dark block w-full border border-background-dark rounded-xl text-color-text mb-5 px-5 py-4 text-sm font-normal;
 }
 .input:focus {
   @apply bg-foreground border-color-border text-color-title caret-primary outline-none;
+
 }
 
 /* CARD */
