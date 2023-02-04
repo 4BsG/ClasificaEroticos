@@ -38,44 +38,17 @@ const Home: NextPage = () => {
       <h1 className="text-3xl font-bold underline text-red-500 mb-5">
       Hello world!
       </h1>
-      <CardCTA
-        image={notificationSvg}
-        title='publish your ads now'
-        descrption='Register now to publish your ads and get much more!'
-        className='mx-sides-sm mb-10'
-      >
-        <Button
-          label='register'
-          variant='primary'
-          action={() => console.log('test')}
-        />
-      </CardCTA>
-      
-      <CardAccountType
-        image={manSvg}
-        title='Choose your account type'
-        descrption='Let us know for what you are here so we
-        can serve you better'
-        className='mx-sides-sm mb-10'
-      >
-        <Button
-          label='To post ads'
-          variant='primary'
-          action={() => console.log('test')}
-        />
-        <Button
-          label='to post experiences'
-          variant='secondary'
-          action={() => console.log('test')}
-        />
-      </CardAccountType>
+      <Link href={'/inputs'}>
+        <a className="btn btn-primary btn-size-m w-72">
+          Inputs components, click it!{' '}
+        </a>
+      </Link>
+      <Link href={'/molecules'}>
+        <a className="btn btn-primary btn-size-m w-72 mt-4">
+          Molecules components, click it!{' '}
+        </a>
+      </Link>
 
-      <CardServices
-        className='mb-20'
-        image={serviceSvg}
-        tags={tagsList}
-        action={() => console.log('Test card-service')}
-      />
     </>
   );
 };

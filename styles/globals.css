@@ -3,8 +3,7 @@
 /* Text Style: .ts */
 /* box - align - size - font*/
 .ts-base {
-  @apply block text-left text-xs md:text-base lg:text-[1.37rem] font-poppins font-normal leading-1.4 lg:leading-1.4 text-color-text not-italic mb-2.5;
-  text-align: inherit;
+  @apply text-left text-xs font-poppins font-normal leading-1.4 text-color-text not-italic mb-2.5;
 }
 .ts-title {
   @apply text-lg md:text-[1.375rem] lg:text-[1.75rem] font-semibold lg:leading-1.4 text-color-title mb-8;
@@ -194,6 +193,32 @@
   @apply bg-foreground border-color-border text-color-title caret-primary outline-none;
 }
 
+/* NAVBAR */
+.navbar-container {
+  @apply bg-foreground px-3 py-5 flex items-center justify-between;
+}
+
+/* STEPPER */
+.step-item {
+  @apply relative flex justify-center items-center w-full;
+}
+.step-item:not(:first-child)::before {
+  @apply content-[''] bg-color-text absolute w-full h-[3px] right-1/2 top-2/4;
+}
+
+.step {
+  @apply relative w-6 h-6 z-10 flex items-center justify-center rounded-full bg-background border-2 border-color-text font-poppins text-color-text text-xs;
+}
+.active .step {
+  @apply border-primary text-primary;
+}
+.complete .step {
+  @apply bg-primary border-primary text-slate-50;
+}
+.complete:not(:first-child)::before,
+.active:not(:first-child)::before {
+  @apply bg-primary;
+}
 /* CARD */
 .card-container {
   @apply bg-foreground max-w-full rounded-2xl flex flex-col mx-auto items-center;
