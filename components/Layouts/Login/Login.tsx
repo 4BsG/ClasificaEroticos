@@ -12,7 +12,7 @@ export default function Login() {
       <div className="h-1/2 w-full ">
         <MobileBackground />
       </div>
-      <div className="h-1/2 w-full flex flex-col gap-3 justify-between p-4 bg-foreground">
+      <div className="h-1/2 w-full flex flex-col gap-3 justify-between p-4 bg-foreground rounded-t-2xl">
         <h2 className="text-xl font-bold">Welcome Back</h2>
         <label htmlFor="">Email</label>
         <TextInput />
