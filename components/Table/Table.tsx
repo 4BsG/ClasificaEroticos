@@ -2,7 +2,7 @@ import { MdStars } from 'react-icons/md';
 
 const Table = () => {
   return (
-    <div className="bg-foreground w-full p-6">
+    <div className="bg-foreground w-full ">
       <table className="table-fixed w-full  ">
         <tbody>
           <tr className="border-b border-color-text border-opacity-10">
