@@ -1,5 +1,4 @@
 import React from 'react'
-import TopBar from '../../components/AdPost/TopBar'
 import Stepper from '../../components/Stepper/Stepper'
 import PhoneContainer from '../../components/PhoneContainer/PhoneContainer'
 
@@ -19,7 +18,6 @@ export default function AdPost() {
 
   return (
     <>
-      <TopBar />
       <div className='w-full h-24 pt-8'>
         <Stepper
           steps={steps}

@@ -1,0 +1,49 @@
+{
+  "services": [
+    {
+      "image": "/icons/contacts-icon.svg",
+      "service_name": "Otros Contactos",
+      "service_id": 1
+    },
+    {
+      "image": "/icons/masaje.svg",
+      "service_name": "Mensajes Eroticos",
+      "service_id": 2
+    },
+    {
+      "image": "/icons/sugar-baby.svg",
+      "service_name": "Sugar Baby",
+      "service_id": 3
+    },
+    {
+      "image": "/icons/gay-icon.svg",
+      "service_name": "Escorts Gay",
+      "service_id": 4
+    },
+    {
+      "image": "/icons/acompanantes.svg",
+      "service_name": "Escorts",
+      "service_id": 5
+    },
+    {
+      "image": "/icons/trans.svg",
+      "service_name": "Travestis",
+      "service_id": 6
+    },
+    {
+      "image": "/icons/daddy.svg",
+      "service_name": "Sugar Daddy",
+      "service_id": 7
+    },
+    {
+      "image": "/icons/mommy.svg",
+      "service_name": "Sugar Mommy",
+      "service_id": 8
+    },
+    {
+      "image": "/icons/gi.svg",
+      "service_name": "Gigolos",
+      "service_id": 9
+    }
+  ]
+}
