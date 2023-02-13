@@ -48,5 +48,6 @@ export default function Footer() {
         </p>
       </section>
     </footer>
+    
   )
 }

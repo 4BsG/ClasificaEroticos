@@ -12,8 +12,8 @@ export default function NavFooterLayout ({children}:Props) {
     <>
       <TopBar />
       {children}
-      <Footer />
-      <BottomMenu />
+      <Footer/>
+      <BottomMenu  />
     </>
   )
 }

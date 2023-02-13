@@ -1,0 +1,97 @@
+{
+    "icons": [
+        {
+            "id": 1,
+            "title": "Ads",
+            "icon_url": "/icons/megaphone.svg",
+            "number_of_interactions": 4
+        },
+        {
+            "id": 2,
+            "title": "Publications",
+            "icon_url": "/icons/pubs.svg",
+            "number_of_interactions": 2
+        },
+        {
+            "id": 3,
+            "title": "Views",
+            "icon_url": "/icons/view-eye.svg",
+            "number_of_interactions": 234
+        },
+        {
+            "id": 4,
+            "title": "Lists",
+            "icon_url": "/icons/lists.svg",
+            "number_of_interactions": 1
+        },
+        {
+            "id":5,
+            "title": "Phones",
+            "icon_url": "/icons/call-1.svg",
+            "number_of_interactions": 2
+        },
+        {
+            "id": 6,
+            "title": "Whatsapp Keys",
+            "icon_url": "/icons/whatsapp.svg",
+            "number_of_interactions": 1
+        }
+    ],
+    "sidenav_icons":[
+        {
+            "id": 1,
+            "title": "Recharge Credit",
+            "icon_url": "/icons/dollar-sign.svg"
+        },
+        {
+            "id": 2,
+            "title": "My Phones",
+            "icon_url": "/icons/phone-sign.svg"
+        },
+        {
+            "id": 3,
+            "title": "Verified Photos",
+            "icon_url": "/icons/camera-icon-nav.svg"
+        },
+        {
+            "id":4,
+            "title": "My Videos",
+            "icon_url": "/icons/camera-icon.svg"
+        },
+        {
+            "id": 5,
+            "title": "My Experiences",
+            "icon_url": "/icons/star-icon.svg"
+        },
+        {
+            "id":6,
+            "title": "Blocked Users",
+            "icon_url":"/icons/cancel-user.svg"
+        },
+        {
+            "id":7,
+            "title": "Change Password",
+            "icon_url":"/icons/lock.svg"
+        },
+        {
+            "id":8,
+            "title": "Transfer Credit",
+            "icon_url":"/icons/arrows.svg"
+        },
+        {
+            "id":9,
+            "title": "Credit History",
+            "icon_url":"/icons/credit-history.svg"
+        },
+        {
+            "id":10,
+            "title": "Delete Account",
+            "icon_url":"/icons/cancel.svg"
+        },
+        {
+            "id":11,
+            "title": "Logout",
+            "icon_url":"/icons/logout.svg"
+        }
+    ]
+}

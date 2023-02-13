@@ -2,6 +2,7 @@ import Image from 'next/image'
 
 export default function BottomMenu() {
   return (
+
     <nav className=" h-20 w-full flex justify-center items-center bg-foreground">
       <ul className="inline-flex w-full  justify-around">
         <li>
@@ -18,5 +19,6 @@ export default function BottomMenu() {
         </li>
       </ul>
     </nav>
+       
   )
 }
