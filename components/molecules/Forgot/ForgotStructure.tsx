@@ -54,9 +54,11 @@ export const ForgotStructure = () => {
 
   return (
     <>
-      <h2 className="text-xl font-bold">Forgot Your Password?</h2>
-      <p className="text-color-text"> We will send you an email verifications. Code to verify it´s you.</p>
-      <label htmlFor="">Email</label>
+      <h2 className="text-xl font-bold md:text-center">Forgot Your Password?</h2>
+      <p className="text-color-text md:text-center">
+        We will send you an email verification code to verify it´s you.
+      </p>
+      <label htmlFor="" className=" md:hidden">Email</label>
       <TextInput />
       <div
         className="w-full h-16 flex justify-center items-center "

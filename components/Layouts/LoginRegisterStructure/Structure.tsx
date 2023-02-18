@@ -14,7 +14,7 @@ type StructureProps = {
 }
 
 const Structure = ({ children }: PropsWithChildren<StructureProps>) => (
-  <div className="h-auto w-full flex flex-col gap-3 justify-between p-4 bg-foreground rounded-t-2xl">
+  <div className="h-auto md:h-2/3 w-full md:max-w-md flex flex-col gap-3 justify-between p-4 bg-foreground rounded-t-2xl md:rounded-sm">
     {children}
   </div>
 )
