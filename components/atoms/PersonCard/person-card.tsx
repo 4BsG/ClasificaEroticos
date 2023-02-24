@@ -15,12 +15,12 @@ export default function PersonCard({
 }: PersonCardProps) {
   return (
     <article className=" w-full h-52 grid grid-cols-6 gap-0 bg-foreground rounded-xl shadow-xl">
-      <div className="col-span-2 row-span-3 flex items-center justify-center">
-        <div className=" h-32 w-24 rounded-xl bg-no-repeat bg-cover bg-center "
+      <div className="col-span-2 row-span-3 flex items-center justify-center  md:row-span-6">
+        <div className=" h-32 w-24 md:w-full md:h-full rounded-xl bg-no-repeat bg-cover bg-center"
           style={{ backgroundImage: `url(${image_url}` }}
         />
       </div>
-      <div className="col-span-4 row-span-3 flex flex-col items-center justify-center">
+      <div className="col-span-4 row-span-3 flex flex-col items-center justify-center md:pl-4">
         <div className="h-32 flex flex-col gap-2">
           <h2 className=" text-sm font-semibold tracking-wide ">
             {title}
@@ -39,8 +39,8 @@ export default function PersonCard({
           </div>
         </div>
       </div>
-      <div className="col-span-4 row-span-1 flex items-center justify-start pl-4">
-        <ul className="inline-flex justify-start gap-6 items-center">
+      <div className="col-span-4 row-span-1 flex items-center justify-start pl-4  md:col-span-2">
+        <ul className="inline-flex justify-start gap-6 md:gap-2 items-center">
           <span className="opacity-70">Services:</span>
           <li
             className=" pt-2"
@@ -49,7 +49,7 @@ export default function PersonCard({
               src="/video.svg"
               alt="Picture of the author"
               width={30}
-              height={20}
+              height={40}
             />
           </li>
           <li

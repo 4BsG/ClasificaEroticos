@@ -7,7 +7,7 @@ export default function SecondStep() {
     <>
       <h2 className={subtitleStyle}>Choose Add Duration</h2>
       <p className=" opacity-70 text-sm">To public your add please choose the duration of your ad.</p>
-      <div className="flex flex-col gap-6 mt-4 mb-8">
+      <div className="flex flex-col gap-6 mt-4 mb-8 md:flex-row">
         <ButtonChoose
           type="ad"
           price={20}
@@ -29,7 +29,7 @@ export default function SecondStep() {
       </div>
       <h2 className={subtitleStyle}>Choose Ad Priority</h2>
       <p className=" opacity-70 text-sm">To public your add please choose the duration of your ad.</p>
-      <div className="flex flex-col gap-6 mt-4 mb-16">
+      <div className="flex flex-col gap-6 mt-4 mb-16 md:flex-row">
         <ButtonChoose
           type="ad"
           price={20}

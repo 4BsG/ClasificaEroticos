@@ -9,6 +9,7 @@ import PreviewStep from '../../components/molecules/Steps/PreviewStep'
 import DoneStep from '../../components/molecules/Steps/DoneStep'
 
 import { Button } from '../../components/Button/Button'
+import Layout from '../../components/Layouts/MyLayout/Layout'
 
 
 export default function AdPost() { 
@@ -17,7 +18,7 @@ export default function AdPost() {
   const [complete, setComplete] = React.useState(false)
 
   return (
-    <>
+    <Layout showNavBar={true}>
       <div className='w-full h-24 pt-8'>
         <Stepper
           steps={steps}
@@ -27,62 +28,62 @@ export default function AdPost() {
           setComplete={setComplete}
         />
       </div>
-      <PhoneContainer>
-        <section className='p-4 w-full flex flex-col gap-4'>
-          <>
-            {
-              !complete ? (
-                <>
-                  {currentStep === 1 && <FirstStep />}
-                  {currentStep === 2 && <SecondStep />}
-                  {currentStep === 3 && <ConfirmStep />}
-                  {currentStep === 4 && <PreviewStep />}
-                </>
-              ) : (
-                <DoneStep />
-              )
-            }
-          </>
+      <div className='w-full h-full flex justify-center items-center'>
+        <PhoneContainer>
+          <section className='p-4 w-full flex flex-col gap-4'>
+            <>
+              {
+                !complete ? (
+                  <>
+                    {currentStep === 1 && <FirstStep />}
+                    {currentStep === 2 && <SecondStep />}
+                    {currentStep === 3 && <ConfirmStep />}
+                    {currentStep === 4 && <PreviewStep />}
+                  </>
+                ) : (
+                  <DoneStep />
+                )
+              }
+            </>
 
 
-          <>
-            {
-              !complete ? (
-                <>
-                  <section className='w-full h-12 flex gap-4'>
-                    <Button variant='secondary' size="m" action={() => {
-                      if (currentStep === 1) {
-                        setComplete(false)
-                      } else {
-                        setCurrentStep(currentStep - 1)
-                      }
-                    }} label="Cancel" />
-                    <Button variant='primary' size="m" action={() => {
-                      if (currentStep === steps.length) {
-                        setComplete(true)
-                      } else {
-                        setCurrentStep(currentStep + 1)
-                      }
-                    }} label="Next" />
-                  </section>
-                </>
-              ) : (
-                <section className='w-full h-12 flex justify-center items-center gap-4'>
-                  <div className=' w-48 h-24'>
-                    <Button variant='primary' size="l" action={() => {
-                      setCurrentStep(1)
-                      setComplete(false)
-                    }
-                    } label="Great!" />
+            <>
+              {
+                !complete ? (
+                  <div className='w-full h-12 flex justify-end'>
+                    <section className='w-full h-12 flex gap-4 md:w-1/2 '>
+                      <Button variant='secondary' size="m" action={() => {
+                        if (currentStep === 1) {
+                          setComplete(false)
+                        } else {
+                          setCurrentStep(currentStep - 1)
+                        }
+                      }} label="Cancel" />
+                      <Button variant='primary' size="m" action={() => {
+                        if (currentStep === steps.length) {
+                          setComplete(true)
+                        } else {
+                          setCurrentStep(currentStep + 1)
+                        }
+                      }} label="Next" />
+                    </section>
                   </div>
-                </section>
-              )
-            }
-          </>
-        </section>
-
-
-      </PhoneContainer>
-    </>
+                ) : (
+                  <section className='w-full h-12 flex justify-center items-center gap-4'>
+                    <div className=' w-48 h-24'>
+                      <Button variant='primary' size="l" action={() => {
+                        setCurrentStep(1)
+                        setComplete(false)
+                      }
+                      } label="Great!" />
+                    </div>
+                  </section>
+                )
+              }
+            </>
+          </section>
+        </PhoneContainer>
+      </div>
+    </Layout>
   )
 }

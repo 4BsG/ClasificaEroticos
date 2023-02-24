@@ -20,9 +20,11 @@ export default function FirstStep() {
         </div>
       </div>
       <p className='text-xs  text-color-text'>Phone Number (This phone number will be public)</p>
-      <article className='flex w-full h-12  justify-between'>
+      <article className='flex w-full h-12 gap-4  justify-between'>
         <SelectPrefix />
-        <NumberInput />
+        <div className='w-full'>
+          <NumberInput />
+        </div>
       </article>
       <div className='w-full text-xs h-5 flex justify-end pr-2 text-primary'>
         <p>Verify Phone Number</p>
@@ -39,16 +41,27 @@ export default function FirstStep() {
       </div>
       
       <div className='flex flex-col gap-4 mb-8'>
-        <label className={labelStyle}>Address</label>
-        <div>
-          <TextInput />
-        </div>
-        <label htmlFor="" className={labelStyle}>Province</label>
-        <SelectInput />
-        <label htmlFor="" className={labelStyle}>City</label>
-        <SelectInput />
-        <label htmlFor="" className={labelStyle}>Country</label>
-        <SelectInput />
+        <section className='w-full md:grid grid-cols-2 gap-8'>
+          <div>
+            <label className={labelStyle}>Address</label>
+            <TextInput />
+          </div>
+          <div>
+            <label htmlFor="" className={labelStyle}>Province</label>
+            <SelectInput />
+          </div>
+        </section>
+        <section className='w-full md:grid grid-cols-2 gap-8'>
+          <div>
+            <label htmlFor="" className={labelStyle}>City</label>
+            <SelectInput />
+          </div>
+          <div>
+            <label htmlFor="" className={labelStyle}>Country</label>
+            <SelectInput />
+          </div>
+
+        </section>
       </div>
 
       <div className='w-full h-6 flex justify-between'>
@@ -61,25 +74,35 @@ export default function FirstStep() {
         </div>
       </div>
 
-      <label htmlFor="" className={labelStyle}>Title</label>
-      <p className='text-color-text'>This is the most important part of your ad make it look catchy.</p>
-      <div>
-        <TextInput />
-      </div>
+      <section className='w-full md:grid grid-cols-2'>
+        <div>
+          <label htmlFor="" className={labelStyle}>Title</label>
+          <p className='text-color-text'>This is the most important part of your ad make it look catchy.</p>
+          <TextInput />
+        </div>
+        <div>
+          <label htmlFor="" className={labelStyle}>Category</label>
+          <SelectInput />
+        </div>
+      </section>
 
+
+      
       <div className='flex flex-col gap-4 mb-8'>
-        <label htmlFor="" className={labelStyle}>Category</label>
-        <SelectInput />
-
         <label htmlFor="" className={labelStyle}>Description</label>
         <p className='text-color-text'>Explain your services and mention in clear points to get more clients</p>
         <textarea className=' bg-background rounded-xl'  cols={30} rows={10}/>
-        <label htmlFor="" className={labelStyle}>Departures countries</label>
+      </div>
+
+      <div className='w-full md:grid grid-cols-2 gap-4'>
         <div>
+          <label htmlFor="" className={labelStyle}>Departures country</label>
           <TextInput />
         </div>
-        <label htmlFor="" className={labelStyle}>Age</label>
-        <SelectInput />
+        <div>
+          <label htmlFor="" className={labelStyle}>Age</label>
+          <SelectInput />
+        </div>
       </div>
 
       <div className='w-full h-6 flex justify-between '>
@@ -90,13 +113,15 @@ export default function FirstStep() {
         </div>
       </div>
 
-      <label htmlFor="" className={labelStyle}>Email</label>
-      <div>
-        <TextInput />
-      </div>
-      <label htmlFor="" className={labelStyle}>Web</label>
-      <div>
-        <TextInput />
+      <div className='w-full md:grid grid-cols-2 gap-4'>
+        <div>
+          <label htmlFor="" className={labelStyle}>Email</label>
+          <TextInput />
+        </div>
+        <div>
+          <label htmlFor="" className={labelStyle}>Web</label>
+          <TextInput />
+        </div>
       </div>
 
       <p className='text-sm opacity-70'>Choose</p>
@@ -138,20 +163,22 @@ export default function FirstStep() {
           </div>
         </div>
       </div>
-      <DropItem
-        title='Upload Images'
-        subtitle='Only upload your own images, not too blur, not too small and not with watermarks'
-        helperImage={'/photo-camera.svg'}
-        helperText={'Upload Images'}
-      />
+      <section className='w-full md:grid grid-cols-2'>
+        <DropItem
+          title='Upload Images'
+          subtitle='Only upload your own images, not too blur, not too small and not with watermarks'
+          helperImage={'/photo-camera.svg'}
+          helperText={'Upload Images'}
+        />
 
  
-      <DropItem
-        title='Upload Video'
-        subtitle='Only upload your own images, not too blur, not too small and not with watermarks'
-        helperImage={'/video.svg'}
-        helperText={'Upload Videos'}
-      />
+        <DropItem
+          title='Upload Video'
+          subtitle='Only upload your own images, not too blur, not too small and not with watermarks'
+          helperImage={'/video.svg'}
+          helperText={'Upload Videos'}
+        />
+      </section>
 
       <div className='flex text-xs text-color-text gap-2 mt-24'>
         <CheckInput />
