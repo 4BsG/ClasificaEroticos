@@ -17,8 +17,8 @@ export default function TopBar() {
           <Menu isOpen={isOpen} setIsOpen={setIsOpen} />
           <Image src="/clasifica2.svg" alt="Picture of the author" width={150} height={40} />
         </div>
-        {!isMobile ? <NavMenu /> : null}
         <div className="flex gap-2 items-center">
+          {!isMobile ? <NavMenu /> : null}
           {!isMobile ? <SelectCountry /> : null}
           <PointsButton points={20} />
         </div>

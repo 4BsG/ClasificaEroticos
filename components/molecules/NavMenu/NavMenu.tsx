@@ -17,7 +17,7 @@ const ButtonMenu = ({image}:ButtonMenuProps) => {
 
 export const NavMenu = () => { 
   return (
-    <section className='w-96 flex justify-between'>
+    <section className='w-96 flex justify-between mr-8'>
       {menuItems.map((item, index) => <ButtonMenu key={index} image={item} />)}
     </section>
   )
