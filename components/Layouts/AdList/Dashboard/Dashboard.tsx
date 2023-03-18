@@ -17,7 +17,7 @@ export const Dashboard = () => {
   
   return (
     <>
-      <section className=" w-full grid grid-cols-2 gap-4 place-items-center">
+      <section className=" w-full grid grid-cols-2 md:grid-cols-3 gap-4 place-items-center">
         {adListCardData.map(mapAdListCard)}
       </section>
     </>

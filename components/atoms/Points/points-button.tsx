@@ -6,7 +6,7 @@ interface PointsButtonProps {
 
 export default function PointsButton({ points }: PointsButtonProps) {
   return (
-    <div className=" w-20 h-10 flex justify-center items-center gap-2 bg-primary-off  rounded-xl">
+    <div className="w-20 h-10 md:w-36 md:h-14 flex justify-center items-center gap-2 bg-primary-off  rounded-xl">
       <Image
         src="/starIcon.svg"
         alt="points"

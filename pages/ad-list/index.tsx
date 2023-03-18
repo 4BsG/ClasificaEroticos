@@ -3,6 +3,7 @@ import { Dashboard } from '../../components/Layouts/AdList/Dashboard/Dashboard';
 import { Ads } from '../../components/Layouts/AdList/Ads/Ads';
 import {  Advertisement } from '../../components/Layouts/AdList/Advertisement/Advertisement';
 import { ImagesVerification } from '../../components/Layouts/AdList/ImagesVerification/ImagesVerifications';
+import Layout from '../../components/Layouts/MyLayout/Layout';
 
 const options = [{
   id: 1,
@@ -34,9 +35,9 @@ export default function AdList() {
   const [option, setOption] = React.useState(options[0])
 
   return (
-    <>
+    <Layout showNavBar={true} showFooter={true}>
       <div className="flex flex-col p-2">
-        <ul className="w-full h-24 items-center p-8 text-color-text inline-flex justify-between">
+        <ul className="w-full h-24 md:w-96 items-center p-8 text-color-text inline-flex justify-between">
           { options.map((option) => mapOptions(option, buttonclicked, setButtonClicked, setOption))}
         </ul>    
       </div>
@@ -50,6 +51,6 @@ export default function AdList() {
         option.id === 3 && <ImagesVerification />
       }
       <Advertisement />
-    </>
+    </Layout>
   )
 }

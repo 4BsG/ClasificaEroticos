@@ -1,4 +1,4 @@
-import NavBar from "../../NavBar/NavBar";
+import TopBar from "../../AdPost/TopBar";
 import Footer from "../../molecules/Footer/Footer";
 
 interface LayoutProps { 
@@ -10,7 +10,7 @@ interface LayoutProps {
 const Layout = ({ children, showNavBar, showFooter}:LayoutProps) => { 
   return (
     <>
-      {showNavBar ? <NavBar /> : null}
+      {showNavBar ? <TopBar /> : null}
       {children}
       {showFooter ? <Footer /> : null}
     </>

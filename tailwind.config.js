@@ -47,6 +47,7 @@ module.exports = {
         "color-label": "rgba(255, 255, 255, 0.7)",
         "color-border": "rgba(255, 255, 255, 0.1)",
         "error": "#FF5252",
+        "button-nav": "#343463"
       },
       fontFamily: {
         "poppins": ["Poppins", "sans-serif"],
