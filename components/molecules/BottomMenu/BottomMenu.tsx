@@ -1,22 +1,51 @@
 import Image from 'next/image'
+import Router from 'next/router'
+
+const menuItemsObj = [
+  {
+    id: 1,
+    image: '/nav-icons/1.svg',
+    link: '/home',
+    alt: 'home',
+  },
+  {
+    id: 2,
+    image: '/nav-icons/4.svg',
+    link: '/payment',
+    alt: 'payment',
+  },
+  {
+    id: 3,
+    image: '/nav-icons/2.svg',
+    link: '/select-service',
+    alt: 'profile',
+  },
+  {
+    id: 4,
+    image: '/nav-icons/3.svg',
+    link: '/settings',
+    alt: 'settings',
+  },
+]
 
 export default function BottomMenu() {
+  const router = Router;
+  const handleClick = (link: string) => { 
+    router.push(link)
+  }
   return (
-
-    <nav className=" h-20 w-full flex justify-center items-center bg-foreground">
+    <nav className="fixed bottom-0 h-20 w-full flex justify-center items-center bg-foreground">
       <ul className="inline-flex w-full  justify-around">
-        <li>
-          <Image src="/icons/home-w-text.svg" alt="home" width={37} height={46} />
-        </li>
-        <li>
-          <Image src="/icons/dashboard-icon-t.svg" alt="search" width={37} height={46} />
-        </li>
-        <li>
-          <Image src="/icons/users-icon.svg" alt="users" width={37} height={46} />
-        </li>
-        <li>
-          <Image src="/icons/approve-icon.svg" alt="approve" width={37} height={46} />       
-        </li>
+        {menuItemsObj.map((item) => (
+          <li key={item.id}>
+            <button className="flex flex-col items-center"
+              onClick={() => handleClick(item.link)}
+            >
+              <Image src={item.image} width={28} height={22} alt={item.alt} />
+              <span className="text-xs text-color-text">{item.alt}</span>
+            </button>
+          </li>
+        )) }
       </ul>
     </nav>
        

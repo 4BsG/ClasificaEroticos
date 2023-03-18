@@ -16,12 +16,14 @@ export default function AddCard() {
           <TextInput/>
         </div>
       </div>
-      <Button
-        label="Confirm"
-        action={() => { console.log('hola') }}
-        size="m"
-        variant="primary"
-      />
+      <section className="w-full flex justify-end">
+        <Button
+          label="Confirm"
+          action={() => { console.log('hola') }}
+          size="m"
+          variant="primary"
+        />
+      </section>
     </div>
   )
 }

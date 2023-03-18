@@ -12,7 +12,7 @@ export default function TopBar() {
   const isMobile = useMediaQuery("(max-width: 768px)")
   return (
     <>
-      <nav className="h-20 w-full flex items-center justify-between p-4 md:pr-16 md:pl-16 bg-foreground">
+      <nav className="h-20 w-full flex items-center justify-between p-4 md:pr-6 md:pl-6 bg-foreground">
         <div className=" flex gap-2 ">
           <Menu isOpen={isOpen} setIsOpen={setIsOpen} />
           <Image src="/clasifica2.svg" alt="Picture of the author" width={150} height={40} />

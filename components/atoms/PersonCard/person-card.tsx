@@ -16,7 +16,7 @@ export default function PersonCard({
   return (
     <article className=" w-full h-52 grid grid-cols-6 gap-0 bg-foreground rounded-xl shadow-xl">
       <div className="col-span-2 row-span-3 flex items-center justify-center  md:row-span-6">
-        <div className=" h-32 w-24 md:w-full md:h-full rounded-xl bg-no-repeat bg-cover bg-center"
+        <div className=" h-32 w-24 md:w-full md:h-full rounded-xl bg-no-repeat bg-cover bg-center md:rounded-tr-none  md:rounded-br-none"
           style={{ backgroundImage: `url(${image_url}` }}
         />
       </div>
