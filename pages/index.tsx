@@ -1,29 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { Button } from '../components/Button/Button';
-import { CardAccountType } from '../components/Card/CardAccountType';
-import { CardCTA } from '../components/Card/CardCTA';
-import { CardServices } from '../components/Card/CardServices';
-
-const manSvg = {
-  src: '/man.svg',
-  width: 192,
-  height: 207,
-  alt: 'card'
-}
-const serviceSvg = {
-  src: '/masaje.svg',
-  width: 110,
-  height: 87,
-  alt: 'card'
-}
-const notificationSvg = {
-  src: '/notification.svg',
-  width: 110,
-  height: 87,
-  alt: 'card'
-}
-const tagsList = ["Talca","Rancagua","La Serena","Antofagasta","Chillan","Conception","Rancagua","La Serena","Antofagasta","Chillan","Conception","Rancagua","La Serena","Antofagasta","Chillan","Conception","Rancagua","La Serena","Antofagasta","Chillan","Conception"]
+import Link from 'next/link';
 
 const Home: NextPage = () => {
   return (
