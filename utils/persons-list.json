@@ -1,0 +1,25 @@
+{
+    "persons": [
+        {
+            "id": 1,
+            "image_url": "/img/first-model.png",
+            "title": "Hi, i am Camila and i am ready to provide my...",
+            "description": "Home service in chapinero to motels waxing within the service without additional with our...",
+            "location": "Chapinero"
+        } ,
+        {
+            "id": 2,
+            "image_url": "/img/second-model.png",
+            "title": "Hi, i am Camila and i am ready to provide my...",
+            "description": "Home service in chapinero to motels waxing within the service without additional with our...",
+            "location": "Chapinero"
+        },
+        {
+            "id": 3,
+            "image_url": "/img/third-model.png",
+            "title": "Hi, i am Camila and i am ready to provide my...",
+            "description": "Home service in chapinero to motels waxing within the service without additional with our...",
+            "location": "Chapinero"
+        }  
+    ]
+}
