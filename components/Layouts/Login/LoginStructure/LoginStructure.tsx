@@ -1,3 +1,7 @@
+import { useMutation } from "urql"
+import { useState } from "react"
+import LOGIN_MUTATION from "../../../../graphql/mutations/login"
+
 import TextInput from "../../../input/TextInput"
 import PasswordInput from "../../../input/PasswordInput"
 import CheckInput from "../../../input/CheckInput"
@@ -15,6 +19,25 @@ export const LoginStructre = ({
 LoginStructureProps
 ) => { 
   const isDesktop = useMediaQuery('(min-width:800px)')
+  const [login, setLogin] = useState({
+    email: "",
+    password: ""
+  })
+
+  const [loginResult, loginMutation] = useMutation(LOGIN_MUTATION)
+
+  const handleLogin = () => { 
+    loginMutation(login)
+      .then((result) => {
+        console.log(result)
+        console.log(loginResult)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+
+  } 
+
   return (
     <>
       <h2 className="text-xl font-bold md:text-center">Welcome Back</h2>
@@ -25,17 +48,30 @@ LoginStructureProps
       {
         isDesktop ? (
           <div>
-            <TextInput />
+            <TextInput
+              value={login.email}
+              onChange={(e:any) => setLogin({...login, email: e.target.value})}
+            />
           </div>
-        ): <TextInput />
+        ) : <TextInput
+          value={login.email}
+          onChange={(e:any) => setLogin({...login, email: e.target.value})}
+          
+        /> 
       }
       <label htmlFor="">{isDesktop ? null : 'Password'}</label>
       {
         isDesktop ? (
           <div>
-            <PasswordInput />
+            <PasswordInput
+              value={login.password}
+              onChange={(e:any) => setLogin({...login, password: e.target.value})}
+            />
           </div>
-        ): <PasswordInput />
+        ) : <PasswordInput
+          value={login.password}
+          onChange={(e:any) => setLogin({...login, password: e.target.value})}
+        />
       }
       <article className="w-full  flex justify-end md:justify-start pr-4 md:pr-0 md:pl-2">
         <button
@@ -59,7 +95,7 @@ LoginStructureProps
           variant="primary"
           size="xl"
           className="h-full"
-          action={() => console.log("Login")}         
+          action={() => handleLogin()}         
         />
       </div>
     </>

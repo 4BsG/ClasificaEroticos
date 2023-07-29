@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@0no-co/graphql.web@^1.0.1":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@0no-co/graphql.web/-/graphql.web-1.0.4.tgz#9606eb651955499525d068ce0ad8bea596286ce2"
+  integrity sha512-W3ezhHGfO0MS1PtGloaTpg0PbaT8aZSmmaerL7idtU5F7oCI+uu25k+MsMS31BVFlp4aMkHSrNRxiD72IlK8TA==
+
 "@adobe/css-tools@^4.0.1":
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/@adobe/css-tools/-/css-tools-4.0.1.tgz#b38b444ad3aa5fedbb15f2f746dcd934226a12dd"
@@ -3285,6 +3290,14 @@
   dependencies:
     "@typescript-eslint/types" "5.38.1"
     eslint-visitor-keys "^3.3.0"
+
+"@urql/core@^4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@urql/core/-/core-4.1.0.tgz#2c266a741105129ccced572b9295436dc1ea8441"
+  integrity sha512-mQLO6RAOhITvq6oktFzsEuAngdVwJbTuS+XaZi6evUQu797MXhI0smldEkWg9osvn/I2dyO57oR3LpxpMr9nTg==
+  dependencies:
+    "@0no-co/graphql.web" "^1.0.1"
+    wonka "^6.3.2"
 
 "@webassemblyjs/ast@1.11.1":
   version "1.11.1"
@@ -6766,6 +6779,11 @@ grapheme-splitter@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/grapheme-splitter/-/grapheme-splitter-1.0.4.tgz#9cf3a665c6247479896834af35cf1dbb4400767e"
   integrity sha512-bzh50DW9kTPM00T8y4o8vQg89Di9oLJVLW/KaOGIXJWP/iqCN6WKYkbNOF04vFLJhwcpYUh9ydh/+5vpOqV4YQ==
+
+graphql@^16.7.1:
+  version "16.7.1"
+  resolved "https://registry.yarnpkg.com/graphql/-/graphql-16.7.1.tgz#11475b74a7bff2aefd4691df52a0eca0abd9b642"
+  integrity sha512-DRYR9tf+UGU0KOsMcKAlXeFfX89UiiIZ0dRU3mR0yJfu6OjZqUcp68NnFLnqQU5RexygFoDy1EW+ccOYcPfmHg==
 
 handlebars@^4.7.7:
   version "4.7.7"
@@ -11884,6 +11902,14 @@ url@^0.11.0:
     punycode "1.3.2"
     querystring "0.2.0"
 
+urql@^4.0.5:
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/urql/-/urql-4.0.5.tgz#354106523a523d9b0c4101bf4988c7e34c5a243c"
+  integrity sha512-VicPBQXWicSbE+0oPzU2HMyDa//76FmwyQ7LayaYQxX97nhvMLs2ZWQdUmEzQQqvmw4YFaI0wPz1Qisp+PrZIQ==
+  dependencies:
+    "@urql/core" "^4.1.0"
+    wonka "^6.3.2"
+
 use-sync-external-store@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/use-sync-external-store/-/use-sync-external-store-1.2.0.tgz#7dbefd6ef3fe4e767a0cf5d7287aacfb5846928a"
@@ -12241,6 +12267,11 @@ widest-line@^3.1.0:
   integrity sha512-NsmoXalsWVDMGupxZ5R08ka9flZjjiLvHVAWYOKtiKM8ujtZWr9cRffak+uSE48+Ob8ObalXpwyeUiyDD6QFgg==
   dependencies:
     string-width "^4.0.0"
+
+wonka@^6.3.2:
+  version "6.3.3"
+  resolved "https://registry.yarnpkg.com/wonka/-/wonka-6.3.3.tgz#aa99fa5f9303a32517497918fdd0208175e7edbe"
+  integrity sha512-id4wYGsT6aEc8/3+by7NTHvTe0DwsOjv7vah0K0+AorV1MHKuS3OQ2g8DGsem1OEXrNShbVLPsg4kG2O6GZ2SQ==
 
 word-wrap@^1.2.3, word-wrap@~1.2.3:
   version "1.2.3"

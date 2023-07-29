@@ -5,4 +5,6 @@ export interface InputProps {
   size?: 'xs' | 's' | 'm' | 'l' | 'xl';
   type?: 'password' | 'email' | 'text' | 'checkbox' | 'number';
   action?: () => void;
+  value?: string;
+  onChange?: React.ChangeEventHandler<HTMLInputElement>;
 }
