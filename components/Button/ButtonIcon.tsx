@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ButtonIconProps } from ".";
 
 import { RiHeart3Line } from 'react-icons/ri';
-import { GoTrashcan } from 'react-icons/go';
+import { GoTrash } from 'react-icons/go';
 import { IoCloseCircleOutline } from 'react-icons/io5';
 import { BsArrowRight, BsArrowLeft, BsChevronDoubleRight, BsChevronDoubleLeft, BsPlayFill } from "react-icons/bs";
 
@@ -29,7 +29,7 @@ export const ButtonIcon: React.FC<ButtonIconProps> = (prop) => {
 
   const icons: IconList = {
     like: <RiHeart3Line />,
-    trash: <GoTrashcan />,
+    trash: <GoTrash />,
     play: <BsPlayFill />,
     close: <IoCloseCircleOutline />,
     next: <BsArrowRight />,

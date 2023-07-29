@@ -18,7 +18,6 @@
   text-transform: capitalize;
   @apply block text-left text-xs font-poppins font-normal leading-1.4 text-color-text not-italic mb-2.5;
 }
-}
 .ts-label {
   @apply font-medium text-color-label mb-3;
 }
@@ -278,4 +277,4 @@ a {
     color: white;
     background: #01003C;
   }
-}
+}}} 
